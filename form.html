@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+<head>
+  <title>Form</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <header>
+    <h1><a href="Main.html">HTML</a></h1>
+  </header>
+
+  <h2>목차</h2>
+  <ol>
+  <li><a href="HTML소개.html">HTML 소개</a></li>
+  <li><a href="문서의구조.html">문서의 구조(head태그와 body태그)</a></li>
+  <li><a href="head태그.html">head태그</a></li>
+  <li><a href="기본문법.html">기본문법</a></li>
+  <li><a href="하이퍼텍스트와 속성.html">하이퍼텍스트와 속성</a></li>
+  <li><a href="리스트와 태그의 중첩.html">리스트와 태그의 중첩</a></li>
+  <li><a href="주요태그.html">주요태그</a></li>
+  <li><a href="form.html">form</a></li>
+  </ol>
+<h3>1. 기본</h3>
+<form action="http://localhost/login.php"><!-- 여기로 데이터 전송 -->
+  <p>아이디 : <input type="text" name="id"></p>
+  <p>비밀번호 : <input type="password"name="password"></p>
+  <p>주소 : <input type="text"name="address"></p>
+  <input type="submit">
+</form>
+<br>사용법<br>
+<xmp>
+  <form action="http://localhost/login.php"><!-- 여기로 데이터 전송 -->
+    <p>아이디 : <input type="text" name="id"></p>
+    <p>비밀번호 : <input type="password"name="password"></p>
+    <p>주소 : <input type="text"name="address"></p>
+    <input type="submit">
+  </form>
+</xmp>
+
+<h3>2. 문자입력</h3>
+<form action="">
+  <p>text : <input type="text"name="id"value="default value"></p>
+  <p>password : <input type="password"name="password"value="default value"></p>
+  <p>textarea :
+    <textarea cols="50"rows="2"name="text">default value</textarea>
+  </p>
+</form>
+<br>사용법<br>
+<xmp>
+  <form action="">
+    <p>text : <input type="text"name="id"value="default value"></p>
+    <p>password : <input type="password"name="password"value="default value"></p>
+    <p>textarea :
+      <textarea cols="50"rows="2"name="text">default value</textarea>
+    </p>
+  </form>
+</xmp>
+
+
+<h3>3. dropdown list</h3>
+<form class="" action="http://localhost/color.php">
+  <h1>색상</h1>
+  <select name="color">
+    <option value="red">붉은색</option>
+    <option value="black">검은색</option>
+    <option value="blue">파란색</option>
+
+  </select>
+  <input type="submit" >
+
+  <h1>색상(다중선)</h1>
+  <select name="color2" multiple>
+    <option value="red">붉은색</option>
+    <option value="black">검은색</option>
+    <option value="blue">파란색</option>
+
+  </select>
+  <input type="submit" >
+</form>
+
+<br>사용법<br>
+<xmp>
+  <form class="" action="http://localhost/color.php">
+    <h1>색상</h1>
+    <select name="color">
+      <option value="red">붉은색</option>
+      <option value="black">검은색</option>
+      <option value="blue">파란색</option>
+
+    </select>
+    <input type="submit" >
+
+    <h1>색상(다중선)</h1>
+    <select name="color2" multiple>
+      <option value="red">붉은색</option>
+      <option value="black">검은색</option>
+      <option value="blue">파란색</option>
+
+    </select>
+    <input type="submit" >
+  </form>
+</xmp>
+
+
+<h3>4. radio & checkbox</h3>
+<!-- radio버튼은 name값이 같은 것끼리 같은 그룹끼리 -->
+<!-- checked로 미리 선택 할수도 있다. -->
+<form action="http://localhost/color.php">
+  <p>
+    <h3>색상(단일선택)</h3>
+    붉은색 : <input type="radio" name="color" value="red">
+    검은색 : <input type="radio" name="color" value="black" checked>
+    파란색 : <input type="radio" name="color" value="blue">
+  </p>
+  <p>
+    <h3>사이즈(다중선택)</h3>
+    95 : <input type="checkbox" name="size" value="95">
+    100 : <input type="checkbox" name="size" value="100"checked>
+    105 : <input type="checkbox" name="size" value="105">
+  </p>
+  <input type="submit">
+</form>
+
+<br>사용법<br>
+<xmp>
+  <!-- radio버튼은 name값이 같은 것끼리 같은 그룹끼리 -->
+  <!-- checked로 미리 선택 할수도 있다. -->
+  <form action="http://localhost/color.php">
+    <p>
+      <h3>색상(단일선택)</h3>
+      붉은색 : <input type="radio" name="color" value="red">
+      검은색 : <input type="radio" name="color" value="black" checked>
+      파란색 : <input type="radio" name="color" value="blue">
+    </p>
+    <p>
+      <h3>사이즈(다중선택)</h3>
+      95 : <input type="checkbox" name="size" value="95">
+      100 : <input type="checkbox" name="size" value="100"checked>
+      105 : <input type="checkbox" name="size" value="105">
+    </p>
+    <input type="submit">
+  </form>
+</xmp>
+
+<h3>5. button</h3>
+<form action="http://localhost/color.php">
+  <input type="submit"  value="전송">
+  <input type="button"  value="버튼" onclick="alert('hellow world')">
+  <input type="reset">
+
+</form>
+
+<br>사용법<br>
+<xmp>
+  <form action="http://localhost/color.php">
+    <input type="submit"  value="전송">
+    <input type="button"  value="버튼" onclick="alert('hellow world')">
+    <input type="reset">
+
+  </form>
+</xmp>
+
+<h3>6. hide</h3>
+<!-- 보이진 않지만 값은 있는것 -->
+<form action="http://localhost/color.php" >
+  <input type="text" name="id">
+  <input type="hidden" name="hide" value="minseok">
+  <input type="submit">
+</form>
+
+<br>사용법<br>
+<xmp>
+  <!-- 보이진 않지만 값은 있는것 -->
+  <form action="http://localhost/color.php" >
+    <input type="text" name="id">
+    <input type="hidden" name="hide" value="minseok">
+    <input type="submit">
+  </form>
+</xmp>
+
+<h3>7. label</h3>
+<!-- 될수있으면 사용하는 것이 좋음 -->
+<form action="http://localhost/color.php">
+  <p>
+    <label for="id_txt">text :</label>
+    <input id="id_txt" type="text"name="id"value="default value"></p>
+  <p>
+    <label for="password.txt">password :</label>
+    <input id="password.txt" type="password"name="password"value="default value"></p>
+  <p>
+    <label>textarea :
+    <textarea cols="50"rows="2"name="text">default value</textarea>
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" name="color" value="red">붉은색
+    </label>
+  </p>
+</form>
+
+<br>사용법<br>
+<xmp>
+  <!-- 보이진 않지만 값은 있는것 -->
+  <!-- 될수있으면 사용하는 것이 좋음 -->
+  <form action="http://localhost/color.php">
+    <p>
+      <label for="id_txt">text :</label>
+      <input id="id_txt" type="text"name="id"value="default value"></p>
+    <p>
+      <label for="password.txt">password :</label>
+      <input id="password.txt" type="password"name="password"value="default value"></p>
+    <p>
+      <label>textarea :
+      <textarea cols="50"rows="2"name="text">default value</textarea>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" name="color" value="red">붉은색
+      </label>
+    </p>
+  </form>
+</xmp>
+
+<h3>8. method</h3>
+<form action="http://localhost/login.php" method="post"><!-- 기본적으로는 get으로 되어있다 get : 정보가 다 적혀있음 post : url에 데이터가 안보임 -->
+  <input type="text" name="id">
+  <input type="password" name="pwd">  <!-- 경우에따라  url방식으로 데이터 전송 또는 -->
+  <input type="submit">
+</form>
+<br>사용법<br>
+<xmp>
+  <form action="http://localhost/login.php" method="post"><!-- 기본적으로는 get으로 되어있다 get : 정보가 다 적혀있음 post : url에 데이터가 안보임 -->
+    <input type="text" name="id">
+    <input type="password" name="pwd">  <!-- 경우에따라  url방식으로 데이터 전송 또는 -->
+    <input type="submit">
+  </form>
+</xmp>
+
+<h3>9. file</h3>
+<form action="http://localhost/upload.php" method="post"enctype="multipart/form-data">
+    <input type="file">
+    <input type="submit">
+</form>
+<br>사용법<br>
+<xmp>
+  <form action="http://localhost/upload.php" method="post"enctype="multipart/form-data">
+      <input type="file" name="profile">
+      <input type="submit">
+  </form>
+</xmp>
+
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+  <title>HTML소개</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <header>
+    <h1><a href="Main.html">HTML</a></h1>
+  </header>
+
+  <h2>목차</h2>
+  <ol>
+  <li><a href="HTML소개.html">HTML 소개</a></li>
+  <li><a href="문서의구조.html">문서의 구조(head태그와 body태그)</a></li>
+  <li><a href="head태그.html">head태그</a></li>
+  <li><a href="기본문법.html">기본문법</a></li>
+  <li><a href="하이퍼텍스트와 속성.html">하이퍼텍스트와 속성</a></li>
+  <li><a href="리스트와 태그의 중첩.html">리스트와 태그의 중첩</a></li>
+  <li><a href="주요태그.html">주요태그</a></li>
+  <li><a href="form.html">form</a></li>
+  </ol>
+
+  <h3>7. 주요태그</h3>
+  <ol>
+  <li>p태그 : <xmp><p></p></xmp></li>
+  <li>br태그 : <xmp><br></br></xmp></li>
+  </ol>
+
+  <h3>1. p태그</h3>
+  <p>p태그란?</p>
+  <p>문단을 구분해주는 태그이다</p>
+  <p>1번째 문단</p>
+  <p>2번째 문단</p>
+
+  <br><h3>2. p태그</h3>
+  br태그란?<br>
+  개행태그이다.<br>
+  1번 개행<br>
+  2번 개행<br><br>
+  끝
+
+  <h3>3. 이미지 태그</h3>
+  <img src="img.jpg"width="640"height="429"alt="람보르기니"title="람보르기">
+  <xmp><img src="img.jpg"width="640"height="429"alt="람보르기니"title="람보르기"></xmp>
+  <p>
+  alt는 이미지가 깨졌을때나 기타사항때 보여주는 것
+  </p>
+
+  <h3>4. 테이블</h3>
+  <table border ="1">
+  <tr>
+  <td>이름</td>  <td>성별</td>  <td>주소</td>
+  </tr>
+  <tr>
+  <td>김민석</td>  <td>남</td>  <td>대구</td>
+  </tr>
+  </table>
+  <br>1. 사용법<br>
+  <xmp>
+    <table border ="1">
+    <tr>
+    <td>이름</td>  <td>성별</td>  <td>주소</td>
+    </tr>
+    <tr>
+    <td>김민석</td>  <td>남</td>  <td>대구</td>
+    </tr>
+    </table>
+  </xmp>
+  <br>2. 표 구조<br>
+  <table border ="1">
+<thead>
+  <tr>
+  <td>이름</td>  <td>성별</td>  <td>주소</td> <td>회비</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+  <td>김민석</td>  <td>남</td>  <td>대구</td> <td>1000</td>
+  </tr>
+  <tr>
+  <td>길동이</td>  <td>남</td>  <td>대구</td> <td>500</td>
+  </tr>
+</tbody>
+<tfoot>
+  <tr>
+  <td>합계</td>  <td></td><td></td><td>1500</td>
+  </tr>
+</tfoot>
+</table>
+<br><xmp><thead></thead>,<tbody></tbody><tfoot></tfoot>로 구조화 할수있다.</xmp>
+<xmp>
+  <table border ="1">
+<thead>
+  <tr>
+  <td>이름</td>  <td>성별</td>  <td>주소</td> <td>회비</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+  <td>김민석</td>  <td>남</td>  <td>대구</td> <td>1000</td>
+  </tr>
+  <tr>
+  <td>길동이</td>  <td>남</td>  <td>대구</td> <td>500</td>
+  </tr>
+</tbody>
+<tfoot>
+  <tr>
+  <td>합계</td>  <td></td><td></td><td>1500</td>
+  </tr>
+</tfoot>
+</table>
+</xmp>
+
+<br>3. 표 병합<br>
+<table border ="1">
+<thead>
+<tr>
+<td>이름</td>  <td>성별</td>  <td>주소</td> <td>회비</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>김민석</td>  <td>남</td>  <td rowspan="2">대구</td> <td>1000</td>
+</tr>
+<tr>
+<td>길동이</td>  <td>남</td> <td>500</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td colspan="3">합계</td><td>1500</td>
+</tr>
+</tfoot>
+</table>
+<br>rowspan,colspan<br>
+<xmp>
+  <table border ="1">
+  <thead>
+  <tr>
+  <td>이름</td>  <td>성별</td>  <td>주소</td> <td>회비</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td>김민석</td>  <td>남</td>  <td rowspan="2">대구</td> <td>1000</td>
+  </tr>
+  <tr>
+  <td>길동이</td>  <td>남</td> <td>500</td>
+  </tr>
+  </tbody>
+  <tfoot>
+  <tr>
+  <td colspan="3">합계</td><td>1500</td>
+  </tr>
+  </tfoot>
+  </table>
+</xmp>
+
+</body>
+</html>
